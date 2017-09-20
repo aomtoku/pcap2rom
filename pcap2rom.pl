@@ -68,7 +68,7 @@ sub tkeep {
 sub tuser {
 	my ($length) = @_;
 	my $re = sprintf("%04x",  $length);
-	my $str = "000000000000"."$re";
+	my $str = "0000000000000000000000000000"."$re";
 
 	return $str;
 }
