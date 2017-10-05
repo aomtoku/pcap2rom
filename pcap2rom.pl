@@ -75,7 +75,7 @@ sub tuser {
 
 sub inter_gap {
 	my ($gap) = @_;
-	my $tmpgap = "0000000000000000000000000000000000000000000000000000000000000000_00000000_0000000000000000_0_0\n";
+	my $tmpgap = "0000000000000000000000000000000000000000000000000000000000000000_00000000_00000000000000000000000000000000_0_0\n";
 	
 	for (my $i = 0; $i < $gap; $i++) {
 		push (@output, $tmpgap);
@@ -116,8 +116,8 @@ my $tmpline1;
 my $line_cnt = 0;
 my $length = 0;
 # Main
-push (@output, "# Packet["."$pkt_cnt"."]\n");
-			my $ff = "";
+#push (@output, "# Packet["."$pkt_cnt"."]\n");
+my $ff = "";
 $ff = shift(@size);
 foreach my $line (@pcap){
 	my @strlist = split(/ /, $line);
@@ -131,7 +131,7 @@ foreach my $line (@pcap){
 		$pkt_cnt++;
 		$ff = shift(@size);
 		inter_gap($pkt_gap);
-		push (@output, "# Packet["."$pkt_cnt"."]\n");
+		#push (@output, "# Packet["."$pkt_cnt"."]\n");
 		$line_cnt = 0;
 	} else {
 		for ($i = 17; $i > 0; $i = $i - 1) {
