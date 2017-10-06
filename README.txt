@@ -7,5 +7,8 @@ Usage :
        -f <Inter Flit GAP (# of clock cycles)>
 
 
+Requirement :
+  wireshark >= 1.12.1
+
 All rigths reserved (C) 2015-2017 Yuta Tokusashi 
 Email: tokusasi@arc.ics.keio.ac.jp
